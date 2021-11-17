@@ -1,0 +1,25 @@
+.l--page {
+    .l--page__section {
+        position: relative;
+        text-align: center;
+        margin-left: 120px;
+    }
+    .l--page__section__head {
+        padding: 146px 0 56px;
+    }
+    .l--page__section__title {
+        @include alp2;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        line-height: 1;
+    }
+    .l--page__section__body {
+        text-align: left;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 940px;
+        min-height: 63vh;
+        text-align: left;
+    }
+}

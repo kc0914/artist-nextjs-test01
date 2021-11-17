@@ -1,0 +1,294 @@
+@mixin pc-l {
+  @media all and (max-width: 1919px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media all and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin tab-l {
+  @media all and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media all and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tab-s {
+  @media all and (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media all and (max-width: 499px) {
+    @content;
+  }
+}
+
+@mixin sp-s {
+  @media all and (max-width: 375px) {
+    @content;
+  }
+}
+
+// // @mixin h1($sp: 2.3rem, $pc: 2.6rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $h1;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+// @mixin h1($sp: 2.2rem, $pc: 2.4rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h1;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+
+// // @mixin h2($sp: 2.2rem, $pc: 2.4rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $h2;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+
+// @mixin h2($sp: 2rem, $pc: 2.3rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h2;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+
+// // @mixin h3($sp: 2rem, $pc: 2.3rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $h3;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+
+// @mixin h3($sp: 1.9rem, $pc: 2.1rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h3;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+
+// // @mixin h4($sp: 1.9rem, $pc: 2.1rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $h4;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+// // @mixin h4i($sp: 1.9rem, $pc: 2.1rem) {
+// //   font-size: $pc !important;
+// //   @include pc-l {
+// //     font-size: $h4 !important;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp !important;
+// //   }
+// // }
+// @mixin h4($sp: 1.8rem, $pc: 2rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h4;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+// @mixin h4i($sp: 1.8rem, $pc: 2rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h4 !important;
+//   }
+//   @include sp-s {
+//     font-size: $sp !important;
+//   }
+// }
+// // @mixin h5($sp: 1.8rem, $pc: 2rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $h5;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+
+// @mixin h5($sp: 1.6rem, $pc: 1.9rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h5;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+
+// // @mixin h5i($sp: 1.8rem, $pc: 2rem) {
+// //   font-size: $pc !important;
+// //   @include pc-l {
+// //     font-size: $h5 !important;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp !important;
+// //   }
+// // }
+
+// @mixin h5i($sp: 1.6rem, $pc: 1.9rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h5 !important;
+//   }
+//   @include sp-s {
+//     font-size: $sp !important;
+//   }
+// }
+
+// // @mixin h6($sp: 1.6rem, $pc: 1.9rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $h6;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+
+// @mixin h6($sp: 1.4rem, $pc: 1.6rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $h6;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+
+// @mixin p($sp: 1.4rem, $pc: 1.6rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $p;
+//     // font-size: 1.6rem;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//     // font-size: 1.6rem;
+//   }
+// }
+
+// @mixin s1($sp: 1.4rem, $pc: 1.6rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $span01;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+// // @mixin s1($sp: 1.3333rem, $pc: 1.6rem) {
+// //   font-size: $pc;
+// //   @include pc-l {
+// //     font-size: $span01;
+// //   }
+// //   @include sp-s {
+// //     font-size: $sp;
+// //   }
+// // }
+
+// @mixin s2($sp: 1.1111rem, $pc: 1.4222rem) {
+//   font-size: $pc;
+//   @include pc-l {
+//     font-size: $span02;
+//   }
+//   @include sp-s {
+//     font-size: $sp;
+//   }
+// }
+
+//transiton
+@mixin trs {
+  transition: 0.3s !important;
+  -webkit-transition: 0.3s !important;
+  -moz-transition: 0.3s !important;
+  -ms-transition: 0.3s !important;
+  -o-transition: 0.3s !important;
+}
+
+@mixin trs-header {
+  transition: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  -webkit-transition: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  -moz-transition: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  -ms-transition: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  -o-transition: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+}
+
+@mixin trs-05 {
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -webkit-transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -moz-transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -ms-transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -o-transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+
+@mixin trs-08 {
+  transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -webkit-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -moz-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -ms-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -o-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+
+@mixin alp {
+  font-family: "Josefin Sans", "Noto Sans JP", "游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Helvetica Neue", Arial, sans-serif;
+}
+
+@mixin alp2 {
+  font-family: "Josefin Slab", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E",
+    "ＭＳ 明朝", "ＭＳ Ｐ明朝", serif;
+}
+
+@mixin jp {
+  font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+    "メイリオ", Meiryo, "Helvetica Neue", Arial, sans-serif;
+}

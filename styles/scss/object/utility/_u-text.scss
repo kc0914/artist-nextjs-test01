@@ -1,0 +1,72 @@
+//align
+.u_txt--center {
+    text-align: center;
+}
+.u_txt--left {
+    text-align: left;
+}
+.u_txt--right {
+    text-align: right;
+}
+.u_txt--justify {
+    text-align: justify;
+}
+//weight
+.u_txt--light {
+    font-weight: lighter;
+}
+.u_txt--normal {
+    font-weight: normal;
+}
+.u_txt--bold {
+    font-weight: bold;
+}
+
+//color
+.u-txt--white {
+    color: #fff;
+}
+
+// letter-spacing
+.spc-large {
+    letter-spacing: 0.24em;
+}
+
+.spc-large--s {
+    letter-spacing: 0.2em;
+}
+
+.spc-normal {
+    letter-spacing: 0.18em;
+}
+.spc-normal--l {
+    letter-spacing: 0.13em;
+}
+.spc-small {
+    letter-spacing: 0.09em;
+}
+
+.spc-smallest {
+    letter-spacing: 0.03em;
+}
+
+.spc-small-sp {
+    @include tab {
+        letter-spacing: 0.05em;
+    }
+}
+
+.spc-large-sp {
+    @include tab {
+        letter-spacing: -0.03em;
+    }
+}
+
+// line-height
+
+.lh-large {
+    line-height: 2.8;
+    @include tab {
+        line-height: 2;
+    }
+}

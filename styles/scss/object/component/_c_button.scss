@@ -1,0 +1,66 @@
+.ly_btnWrap {
+  width: 100%;
+}
+
+.btn {
+  width: fit-content;
+  text-align: center;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  a {
+    padding: 0.5em 1em;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  &.dark {
+    background: $dark-gray;
+    a {
+      color: $light-gray;
+    }
+  }
+  &.light {
+    background: $light-gray;
+    a {
+      color: $dark-gray;
+    }
+  }
+
+  &.left {
+    margin-right: auto;
+  }
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.right {
+    margin-left: auto;
+  }
+}
+
+.btn:hover a {
+  text-decoration: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: $dark-gray;
+  cursor: pointer;
+  @include trs;
+  &:hover {
+    background: $gray;
+  }
+}

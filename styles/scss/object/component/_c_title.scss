@@ -1,0 +1,55 @@
+$min-number: 1;
+$max-number: 1360;
+
+@for $i from $min-number through $max-number {
+  .maxw#{$i} {
+    max-width: #{$i}px !important;
+  }
+}
+.section__title {
+  h1 {
+    letter-spacing: 0;
+    line-height: 1;
+    // font-weight: 600;
+    span {
+      font-size: 1.5em;
+      letter-spacing: -0.02em;
+      // color: $gray;
+    }
+  }
+  h6 {
+    // font-weight: 500;
+  }
+}
+
+.title__wrap {
+  display: flex;
+  align-items: center;
+  .header__icon {
+    font-size: 3em;
+    margin-right: 0.3em;
+    @include sp-s {
+      font-size: 2em;
+    }
+  }
+  &.mb--list {
+    margin-bottom: 3%;
+  }
+}
+
+.page__title {
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  background: $dark-gray;
+  color: $light-gray;
+  text-align: center;
+  position: sticky;
+}
+
+.page__subtitle {
+  padding-bottom: 0.5em;
+  letter-spacing: 0;
+  line-height: 1;
+  // font-weight: 500;
+  border-bottom: 1px solid $dark-gray;
+}

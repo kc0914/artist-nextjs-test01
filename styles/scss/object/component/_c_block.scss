@@ -1,0 +1,26 @@
+.ly_pcContent {
+    display: block !important;
+    @include tab {
+        display: none !important;
+    }
+}
+.ly_spContent {
+    display: none !important;
+    @include tab {
+        display: block !important;
+    }
+}
+
+.ly_pcContent-flex {
+    display: flex !important;
+    @include tab {
+        display: none !important;
+    }
+}
+
+.ly_spContent-flex {
+    display: none !important;
+    @include tab {
+        display: flex !important;
+    }
+}

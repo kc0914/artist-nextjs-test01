@@ -1,0 +1,136 @@
+//margin,padding
+$min-number: 1;
+$max-number: 100;
+
+.mt00 {
+    margin-top: 0 !important;
+}
+.mr00 {
+    margin-right: 0 !important;
+}
+.mb00 {
+    margin-bottom: 0 !important;
+}
+.ml00 {
+    margin-left: 0 !important;
+}
+.mlat {
+    margin-left: auto !important;
+}
+.mrat {
+    margin-right: auto !important;
+}
+
+.mat {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.pt00 {
+    padding-top: 0 !important;
+}
+.pr00 {
+    padding-right: 0 !important;
+}
+.pb00 {
+    padding-bottom: 0 !important;
+}
+.pl00 {
+    padding-left: 0 !important;
+}
+@include tab {
+    .spMt00 {
+        margin-top: 0 !important;
+    }
+    .spMr00 {
+        margin-right: 0 !important;
+    }
+    .spMb00 {
+        margin-bottom: 0 !important;
+    }
+    .spMl00 {
+        margin-left: 0 !important;
+    }
+    .spPt00 {
+        padding-top: 0 !important;
+    }
+    .spPr00 {
+        padding-right: 0 !important;
+    }
+    .spPb00 {
+        padding-bottom: 0 !important;
+    }
+    .spPl00 {
+        padding-left: 0 !important;
+    }
+}
+
+@for $i from $min-number through $max-number {
+    .mt#{$i * 5} {
+        margin-top: #{$i * 5}px !important;
+    }
+
+    .mr#{$i * 5} {
+        margin-right: #{$i * 5}px !important;
+    }
+
+    .mb#{$i * 5} {
+        margin-bottom: #{$i * 5}px !important;
+    }
+
+    .ml#{$i * 5} {
+        margin-left: #{$i * 5}px !important;
+    }
+
+    .pt#{$i * 5} {
+        padding-top: #{$i * 5}px !important;
+    }
+
+    .pr#{$i * 5} {
+        padding-right: #{$i * 5}px !important;
+    }
+
+    .pb#{$i * 5} {
+        padding-bottom: #{$i * 5}px !important;
+    }
+
+    .pl#{$i * 5} {
+        padding-left: #{$i * 5}px !important;
+    }
+}
+
+@include tab {
+    @for $i from $min-number through $max-number {
+        .spMt#{$i * 5} {
+            margin-top: #{$i * 5}px !important;
+        }
+
+        .spMr#{$i * 5} {
+            margin-right: #{$i * 5}px !important;
+        }
+
+        .spMb#{$i * 5} {
+            margin-bottom: #{$i * 5}px !important;
+        }
+
+        .spMl#{$i * 5} {
+            margin-left: #{$i * 5}px !important;
+        }
+
+        .spPt#{$i * 5} {
+            padding-top: #{$i * 5}px !important;
+        }
+
+        .spPr#{$i * 5} {
+            padding-right: #{$i * 5}px !important;
+        }
+
+        .spPb#{$i * 5} {
+            padding-bottom: #{$i * 5}px !important;
+        }
+
+        .spPl#{$i * 5} {
+            padding-left: #{$i * 5}px !important;
+        }
+    }
+}

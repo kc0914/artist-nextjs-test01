@@ -1,0 +1,49 @@
+.ac__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  justify-content: space-between;
+  &:after {
+    content: "";
+    display: block;
+    width: 49%; /* .boxに指定したwidthと同じ幅を指定する */
+    height: 0;
+  }
+}
+
+.ac__menu {
+  width: 49%;
+  margin-bottom: 5%;
+  .menu__header {
+    display: block;
+    text-align: center;
+    background: $dark-gray;
+    color: $light-gray;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    @include trs;
+    span {
+      font-size: 1.5em;
+      margin-left: 0.5em;
+    }
+    &:hover {
+      background: $gray;
+    }
+  }
+  .menu__wrap {
+    display: none;
+  }
+}
+
+.ac__header {
+  cursor: pointer;
+  @include trs;
+  &:hover {
+    background: $gray;
+  }
+}
+
+.ac__wrap {
+  display: none;
+}

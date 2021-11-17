@@ -1,0 +1,19 @@
+.c--banner {
+    padding: 120px 0 0;
+    font-size: 0;
+    letter-spacing: -0.4em;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    .c--banner__item {
+        display: inline-block;
+        width: 45.8%;
+        &:nth-child(2n) {
+            margin-left: 1.7%;
+        }
+        &:nth-child(n + 3) {
+            margin-top: 1.7%;
+        }
+    }
+}

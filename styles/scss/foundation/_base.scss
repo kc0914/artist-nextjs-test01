@@ -1,0 +1,169 @@
+#wpadminbar {
+  display: none;
+}
+
+html {
+  overflow-x: hidden;
+  margin-top: 0 !important;
+}
+
+body {
+  @include jp;
+  word-wrap: break-word;
+  text-size-adjust: 100%;
+  @media all and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.alp {
+  font-family: "Josefin Sans", "Noto Sans JP", "游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Helvetica Neue", Arial, sans-serif;
+}
+.alp-2 {
+  font-family: "Josefin Slab", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E",
+    "ＭＳ 明朝", "ＭＳ Ｐ明朝", serif;
+}
+.jp {
+  font-family: "Noto Sans JP", "游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+    "メイリオ", Meiryo, "Helvetica Neue", Arial, sans-serif;
+}
+.b {
+  font-weight: 700;
+}
+.m {
+  font-weight: 500;
+}
+.r {
+  font-weight: 400;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//リンク
+a {
+  font-feature-settings: palt;
+  text-decoration: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+//画像
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  image-rendering: -webkit-optimize-contrast;
+}
+iframe {
+  vertical-align: middle;
+}
+
+.img__wrap {
+  margin: 0 auto;
+}
+
+//改行
+.ib {
+  display: inline-block;
+}
+
+.tab-l--show {
+  display: none;
+  @include tab-l {
+    display: block;
+  }
+}
+
+.tab-l--hidden {
+  display: block;
+  @include tab-l {
+    display: none;
+  }
+}
+
+.tab--show {
+  display: none;
+  @include tab {
+    display: block;
+  }
+}
+
+.tab--hidden {
+  display: block;
+  @include tab {
+    display: none !important;
+  }
+}
+
+.sp--hidden {
+  @include sp {
+    display: none;
+  }
+}
+
+.sp--show {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+.top-btn {
+  position: fixed;
+  cursor: pointer;
+  bottom: -100%;
+  right: 5%;
+  width: 3em;
+  height: 3em;
+  background: $dark-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $gray;
+  opacity: 0;
+  @include trs;
+
+  & * {
+    color: $light-gray;
+  }
+  &:hover {
+    background: $gray;
+    & * {
+      color: $dark-gray;
+    }
+  }
+  &.fadein {
+    bottom: 3%;
+    opacity: 1;
+  }
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 0;
+}
+
+.entry-header {
+  display: none;
+}
+.entry-footer {
+  display: none;
+}

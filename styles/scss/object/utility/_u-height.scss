@@ -1,0 +1,17 @@
+//margin,padding
+$min-number: 1;
+$max-number: 1000;
+
+@for $i from $min-number through $max-number {
+    .h#{$i} {
+        height: #{$i}px !important;
+    }
+}
+
+@include tab {
+    @for $i from $min-number through $max-number {
+        .spH#{$i} {
+            height: #{$i}px !important;
+        }
+    }
+}

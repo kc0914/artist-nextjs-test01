@@ -1,0 +1,53 @@
+.wppsac-slick-slider-wrp {
+  width: 100% !important;
+  margin-bottom: 5%;
+}
+.wppsac-post-slider.design-3 .wppsac-post-image-bg {
+  height: 250px;
+}
+.wppsac-item-meta {
+  .wppsac-post-date span,
+  .wppsac-post-date:after {
+    display: none;
+  }
+  .wppsac-post-date,
+  .wppsac-post-content,
+  .wppsac-post-content .wppsac-sub-content {
+    color: #fff !important;
+  }
+}
+.wppsac-post-slider button.slick-arrow {
+  display: none !important;
+}
+
+//カテゴリー
+.wppsac-post-slider .wppsac-post-categories ul.wppsac-post-categories-list li {
+  margin: 0 !important;
+}
+
+//dot
+.wppsac-post-slider.design-3 .slick-dots {
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+.wppsac-post-slider .slick-dots li button {
+  border: none !important;
+}
+
+.wppsac-post-slider.design-3 .wppsac-post-short-content {
+  height: 40%;
+}
+
+.wppsac-post-slider .wppsac-post-categories ul.wppsac-post-categories-list li:nth-child(4n + 1) a {
+  background: $dark-gray;
+  @include tab {
+    background: #fff;
+    color: $dark-gray;
+  }
+}
+
+.wppsac-post-slider.design-1 .wppsac-post-content,
+.wppsac-post-slider.design-2 .wppsac-post-content,
+.wppsac-post-slider.design-3 .wppsac-post-content {
+  display: block !important;
+}

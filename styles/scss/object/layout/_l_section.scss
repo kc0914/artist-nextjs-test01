@@ -1,0 +1,13 @@
+.l--section {
+    text-align: center;
+    .l--section__head {
+        padding: 104px 0 75px;
+    }
+    .l--section__title {
+        @include alp2;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,22 @@
+.c--bio {
+    display: flex;
+    justify-content: space-between;
+    .c--bio__img {
+        width: 48%;
+    }
+    .c--bio__text {
+        width: 48%;
+        .c--bio__name {
+            margin-bottom: 25px;
+            font-size: 26px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            line-height: 1;
+        }
+        .c--bio__body {
+            line-height: 1.75;
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.c--footer {
+  text-align: center;
+  position: relative;
+  margin-left: 120px;
+  .c--footer__main {
+    padding: 70px 0 50px;
+    .c--footer__copy {
+      @include alp;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+  }
+  .c--footer__pagetop {
+    position: absolute;
+    right: 40px;
+    bottom: 50px;
+    cursor: pointer;
+    img {
+      transform: scaleY(-1);
+    }
+  }
+}

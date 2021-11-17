@@ -1,0 +1,128 @@
+.ly__list {
+  display: flex;
+  flex-direction: column;
+  li {
+    @include trs;
+    &:hover {
+      //   padding-left: 1em;
+      //   padding-right: 1em;
+    }
+  }
+  //黒背景
+  &.dark li {
+    border-bottom: 1px solid $light-gray;
+    &:first-child {
+      border-top: 1px solid $light-gray;
+    }
+    .tags span {
+      background: $light-gray;
+      color: $dark-gray;
+    }
+    //ホバー
+    &:hover {
+      //   background: $light-gray;
+      background: $gray;
+      //   & * {
+      //     color: $dark-gray;
+      //   }
+      //   .tags span {
+      //     background: $dark-gray;
+      //     color: $light-gray;
+      //   }
+    }
+  }
+  //白背景
+  &.light li {
+    border-bottom: 1px solid $dark-gray;
+    &:first-child {
+      border-top: 1px solid $dark-gray;
+    }
+    .tags span {
+      background: $dark-gray;
+      color: $light-gray;
+    }
+    //ホバー
+    &:hover {
+      //   background: $dark-gray;
+      background: $gray;
+      //   padding-left: 1em;
+      //   padding-right: 1em;
+      //   & * {
+      //     color: $light-gray;
+      //   }
+      //   .tags span {
+      //     background: $light-gray;
+      //     color: $dark-gray;
+      //   }
+    }
+  }
+  li {
+    padding: 0.5em;
+  }
+  &.mb--btn {
+    margin-bottom: 5%;
+  }
+
+  //ニュースレイアウト
+  .news__title {
+    margin-bottom: 0.5em;
+  }
+  .news__date {
+    text-align: right;
+    i {
+      margin-right: 0.3em;
+    }
+  }
+  .news__info {
+    // display: flex;
+    // justify-content: space-between;
+  }
+  .tags {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-bottom: 0.5em;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.2em;
+      @include trs;
+      margin-right: 0.5em;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      height: 1.5em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.pagination,
+.pagenate {
+  margin-top: 3%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  .nav-links {
+    align-items: center;
+  }
+  span,
+  a {
+    margin: 0 0.5em;
+  }
+  a {
+    padding: 0.3em 0.5em;
+    background: $dark-gray;
+    color: $light-gray;
+    border: 1px solid $dark-gray;
+    &:hover {
+      background: $light-gray;
+      color: $dark-gray;
+    }
+  }
+}

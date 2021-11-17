@@ -1,0 +1,20 @@
+//margin,padding
+$min-number: 1;
+$max-number: 100;
+
+@for $i from $min-number through $max-number {
+    .w#{$i} {
+        width: #{$i}% !important;
+    }
+}
+
+
+@include tab{
+    @for $i from $min-number through $max-number {
+        .spW#{$i} {
+            width: #{$i}% !important;
+        }
+    } 
+}
+
+

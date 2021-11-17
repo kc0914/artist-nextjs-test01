@@ -1,0 +1,43 @@
+.c--movie {
+    position: relative;
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto;
+    .c--movie__more {
+        position: absolute;
+        top: -107px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 1;
+        letter-spacing: 0.09em;
+        font-weight: 600;
+        padding: 5px 11px 5px 11px;
+        border: 1px solid #000;
+        @include alp;
+        .c--movie__more__text {
+            margin-left: 0.5em;
+            transform: translateY(1px);
+            -webkit-transform: translateY(1px);
+            -moz-transform: translateY(1px);
+            -ms-transform: translateY(1px);
+            -o-transform: translateY(1px);
+        }
+    }
+    .swiper {
+        overflow: visible;
+    }
+    .swiper-slide {
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        width: 340px;
+    }
+    .c--movie__img {
+        padding-top: 61.8%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
