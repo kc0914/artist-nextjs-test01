@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { client } from "../libs/client";
+// import { client } from "../../../libs/client";
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 
-import Footer from "../components/Footer";
-import { Pagination } from "../components/Pagination";
+import Footer from "../../../components/Footer";
+import { Pagination } from "../../../components/Pagination";
 
 export default function Disco({ disco, category }) {
   dayjs.extend(utc);
@@ -68,6 +68,7 @@ export default function Disco({ disco, category }) {
                           value={`/disco/category/${category.category_slug}/`}
                           key={index}
                         >
+                          {/* SINGLE */}
                           {category.name}
                         </option>
                       ))}
@@ -83,45 +84,9 @@ export default function Disco({ disco, category }) {
               </div>
               <div className="c--disco__inner">
                 <ul className="c--disco__list">
-                  {disco.map((disco) => (
-                    <li key={disco.id} className="c--disco_list__item">
-                      <article className="c--disco_card">
-                        <Link href={`/disco/${disco.id}`}>
-                          <a className="c--article__link">
-                            <div className="c--disco_card__img">
-                              <figure
-                                className="c--disco_card__thumb"
-                                // src={`${disco.jacket_img.url}`}
-                                alt={`${disco.product_title}`}
-                                style={{
-                                  background: `url(${disco.jacket_img.url})`,
-                                  backgroundPosition: `center center`,
-                                  backgroundSize: `contain`,
-                                  backgroundRepeat: `no-repeat`,
-                                }}
-                              />
-                            </div>
-                            <div className="c--disco_card__inner">
-                              <h3 className="c--disco_card__title">
-                                {disco.product_title}
-                              </h3>
-                              <div className="c--disco_card__data">
-                                <p className="c--disco_card__data-item">
-                                  {dayjs
-                                    .utc(disco.release_date)
-                                    .tz("Asia/Tokyo")
-                                    .format("YYYY.MM.DD")}
-                                </p>
-                                <p className="c--disco_card__data-item">
-                                  {disco.category.name}
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                      </article>
-                    </li>
-                  ))}
+                  <p className="c--disco_list__none">
+                    現在、商品情報はありません
+                  </p>
                 </ul>
               </div>
             </div>
@@ -135,14 +100,20 @@ export default function Disco({ disco, category }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  const data = await client.get({
-    endpoint: "disco",
-    queries: { limit: 1000 },
-  });
+  // const data = await client.get({
+  //   endpoint: "disco",
+  //   queries: { limit: 1000 },
+  // });
 
   const key = {
     headers: { "X-MICROCMS-API-KEY": process.env.API_KEY },
   };
+  const dataDisco = await fetch(
+    "https://artist-nextjs-test01.microcms.io/api/v1/disco?filters=category[equals]4ra96aejn--m",
+    key
+  )
+    .then((res) => res.json())
+    .catch(() => null);
 
   const dataCategory = await fetch(
     "https://artist-nextjs-test01.microcms.io/api/v1/category-disco",
@@ -153,7 +124,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      disco: data.contents,
+      disco: dataDisco.contents,
       category: dataCategory.contents,
     },
   };

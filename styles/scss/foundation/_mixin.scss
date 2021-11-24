@@ -14,6 +14,11 @@
     @content;
   }
 }
+@mixin min-tab {
+  @media all and (min-width: 769px) {
+    @content;
+  }
+}
 
 @mixin tab {
   @media all and (max-width: 768px) {
@@ -276,6 +281,14 @@
   -moz-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   -ms-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   -o-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+
+@mixin trs-20 {
+  transition: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -webkit-transition: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -moz-transition: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -ms-transition: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  -o-transition: 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 }
 
 @mixin alp {

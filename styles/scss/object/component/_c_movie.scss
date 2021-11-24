@@ -16,6 +16,13 @@
         padding: 5px 11px 5px 11px;
         border: 1px solid #000;
         @include alp;
+        @include tab {
+            position: relative;
+            top: 0;
+            width: 304px;
+            margin: 30px auto 0;
+            justify-content: center;
+        }
         .c--movie__more__text {
             margin-left: 0.5em;
             transform: translateY(1px);

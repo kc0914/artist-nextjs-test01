@@ -18,6 +18,9 @@
         position: relative;
         margin: 54px auto 0;
         width: 100%;
+        @include tab {
+            margin-top: 24px;
+        }
     }
 }
 
@@ -31,6 +34,10 @@
         margin: 0 auto 10px;
         background-color: #fff;
         padding: 30px 40px 25px 29px;
+        @include tab {
+            margin-bottom: 6px;
+            padding: 14px 14px 12px 14px;
+        }
         .c--single__date {
             @include alp;
             margin-bottom: 10px;
@@ -39,6 +46,12 @@
             font-weight: 500;
             letter-spacing: 0.1em;
             line-height: 1;
+            @include tab {
+                margin-bottom: 4px;
+                font-size: 11px;
+                letter-spacing: 0.1em;
+                line-height: 1;
+            }
         }
         .c--single__title {
             margin-left: 1px;
@@ -46,6 +59,10 @@
             font-weight: 500;
             letter-spacing: 0.01em;
             line-height: 1.4;
+            @include tab {
+                font-size: 12px;
+                line-height: 1.6;
+            }
         }
     }
     // 記事本文
@@ -54,11 +71,20 @@
         margin: 0 auto;
         background-color: #fff;
         padding: 40px 30px 52px;
+        @include tab {
+            padding: 22px 16px 29px;
+        }
         .c--single__text {
             position: relative;
             margin: 0 auto;
             background-color: #fff;
             padding: 40px 30px 52px;
+        }
+        p {
+            @include tab {
+                font-size: 13px;
+                line-height: 1.4;
+            }
         }
     }
 }

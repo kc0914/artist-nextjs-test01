@@ -61,7 +61,7 @@ export const getStaticProps = async () => {
     headers: { "X-MICROCMS-API-KEY": process.env.API_KEY },
   };
   const data = await fetch(
-    "https://artist-nextjs-test01.microcms.io/api/v1/info?offset=0&limit=10",
+    "https://artist-nextjs-test01.microcms.io/api/v1/info?offset=0&limit=1000",
     key
   )
     .then((res) => res.json())

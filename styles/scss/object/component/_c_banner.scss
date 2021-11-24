@@ -6,14 +6,30 @@
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+    @include tab {
+        padding: 52px 0 0;
+    }
     .c--banner__item {
         display: inline-block;
         width: 45.8%;
+        @include tab {
+            display: block;
+            width: 305px;
+            margin: 0 auto 10px;
+        }
         &:nth-child(2n) {
             margin-left: 1.7%;
+            @include tab {
+                margin-left: 0;
+                margin: 0 auto 10px;
+            }
         }
         &:nth-child(n + 3) {
             margin-top: 1.7%;
+            @include tab {
+                margin-left: 0;
+                margin: 0 auto 10px;
+            }
         }
     }
 }

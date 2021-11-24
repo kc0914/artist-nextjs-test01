@@ -80,9 +80,13 @@ export default function InfoId({ info }) {
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "info" });
+  const data = await client.get({
+    endpoint: "info",
+    queries: { limit: 1000 },
+  });
 
   const paths = data.contents.map((content) => `/info/${content.id}`);
+  console.log(data.contents);
   return { paths, fallback: false };
 };
 

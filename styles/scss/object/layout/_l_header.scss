@@ -10,6 +10,9 @@ header {
     justify-content: space-between;
     height: 130px;
     @include trs-header;
+    @include tab {
+      height: 60px;
+    }
   }
   // ロゴ
   .c--header__logo {
@@ -18,8 +21,25 @@ header {
     align-items: center;
     width: 278px;
     @include trs-header;
+    @include tab {
+      position: absolute;
+      width: 40.5%;
+      top: 16px;
+      left: 4%;
+    }
   }
-
+  .c--nav__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d37578;
+    width: 100%;
+    height: 100%;
+    display: none;
+    @include tab {
+      display: block;
+    }
+  }
   // ナビ
   .c--header__nav {
     // max-width: 1000px;
@@ -27,11 +47,34 @@ header {
     justify-content: right;
     max-width: 850px;
     width: 100%;
+    @include trs;
+    &.is--open {
+      opacity: 1;
+      pointer-events: auto;
+    }
     ul {
       width: 100%;
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
+      @include tab {
+        position: relative;
+        padding: 0 34px;
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+    @include tab {
+      position: fixed;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
     }
   }
   .c--header__nav__item {
@@ -46,6 +89,17 @@ header {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+    @include tab {
+      margin-bottom: 9px;
+      font-size: 21px;
+      letter-spacing: 0.055em;
+      line-height: 2;
+      text-align: left;
+      width: fit-content;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     a {
       width: 100%;
       font-size: 17px;
@@ -80,12 +134,85 @@ header {
       -o-transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     }
   }
+  .c--hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+    opacity: 0;
+    z-index: 15;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    display: none;
+    @include tab {
+      display: block;
+      opacity: 1;
+    }
+    &.is--open {
+      .c--hamburger__inner {
+        div {
+          &:nth-child(1) {
+            top: 30px;
+            -webkit-transform: rotate(212deg);
+            transform: rotate(212deg);
+            -moz-transform: rotate(212deg);
+            -ms-transform: rotate(212deg);
+            -o-transform: rotate(212deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            top: 30px;
+            -webkit-transform: rotate(-212deg);
+            transform: rotate(-212deg);
+            -moz-transform: rotate(-212deg);
+            -ms-transform: rotate(-212deg);
+            -o-transform: rotate(-212deg);
+          }
+        }
+      }
+    }
+  }
+  .c--hamburger__inner {
+    position: relative;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+
+    div {
+      position: absolute;
+      left: 23px;
+      transition: all 0.3s ease 0s;
+      background-color: #000;
+      width: 17px;
+      height: 1px;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      &:nth-child(1) {
+        top: 25px;
+      }
+      &:nth-child(2) {
+        top: 30px;
+      }
+      &:nth-child(3) {
+        top: 35px;
+      }
+    }
+  }
 
   // スクロール時のスタイル
   &.active {
     background: #fff;
     .c--header__inner {
       height: 71px;
+      @include tab {
+        height: 60px;
+      }
     }
     .c--header__logo {
       width: 168px;

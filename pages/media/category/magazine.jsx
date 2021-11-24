@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 import Link from "next/link";
-import { client } from "../libs/client";
+// import { client } from "../../../libs/client";
 
-import Footer from "../components/Footer";
-import { Pagination } from "../components/Pagination";
+import Footer from "../../../components/Footer";
+import { Pagination } from "../../../components/Pagination";
 
 export default function Media({ media, category }) {
   const [isActive, setIsActive] = useState("0");
@@ -15,7 +15,6 @@ export default function Media({ media, category }) {
     }
     setIsActive(index);
   };
-
   const handleClick = (value) => {
     location.href = location.protocol + "//" + location.host + "/" + value;
   };
@@ -146,14 +145,22 @@ export default function Media({ media, category }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  const data = await client.get({
-    endpoint: "media",
-    queries: { limit: 1000 },
-  });
+  // const data = await client.get({
+  //   endpoint: "media",
+  //   queries: { limit: 1000 },
+  // });
 
   const key = {
     headers: { "X-MICROCMS-API-KEY": process.env.API_KEY },
   };
+
+  const dataMedia = await fetch(
+    "https://artist-nextjs-test01.microcms.io/api/v1/media?filters=category[equals]ayvnpxwfkp",
+    key
+  )
+    .then((res) => res.json())
+    .catch(() => null);
+
   const dataCategory = await fetch(
     "https://artist-nextjs-test01.microcms.io/api/v1/category",
     key
@@ -163,7 +170,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      media: data.contents,
+      media: dataMedia.contents,
       category: dataCategory.contents,
     },
   };

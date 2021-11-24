@@ -3,9 +3,15 @@
         position: relative;
         text-align: center;
         margin-left: 120px;
+        @include tab {
+            margin-left: 35px;
+        }
     }
     .l--page__section__head {
         padding: 146px 0 56px;
+        @include tab {
+            padding: 83px 14px 36px;
+        }
     }
     .l--page__section__title {
         @include alp2;
@@ -13,6 +19,12 @@
         font-weight: 600;
         letter-spacing: 0.15em;
         line-height: 1;
+        @include tab {
+            font-size: 19px;
+            letter-spacing: 0.22em;
+            line-height: 1;
+            text-align: left;
+        }
     }
     .l--page__section__body {
         text-align: left;
@@ -21,5 +33,9 @@
         max-width: 940px;
         min-height: 63vh;
         text-align: left;
+        @include tab {
+            margin: 0 15px;
+            width: auto;
+        }
     }
 }

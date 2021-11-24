@@ -1,17 +1,32 @@
 .c--bio {
     display: flex;
     justify-content: space-between;
+    @include tab {
+        flex-direction: column;
+    }
     .c--bio__img {
         width: 48%;
+        @include tab {
+            width: 100%;
+            margin-bottom: 4.5%;
+        }
     }
     .c--bio__text {
         width: 48%;
+        @include tab {
+            width: 100%;
+        }
         .c--bio__name {
             margin-bottom: 25px;
             font-size: 26px;
             font-weight: 500;
             letter-spacing: 0.2em;
             line-height: 1;
+            @include tab {
+                font-size: 18px;
+                letter-spacing: 0.16em;
+                line-height: 1.5;
+            }
         }
         .c--bio__body {
             line-height: 1.75;

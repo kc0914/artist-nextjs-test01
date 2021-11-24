@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { client } from "../libs/client";
+// import { client } from "../../../libs/client";
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 
-import Footer from "../components/Footer";
-import { Pagination } from "../components/Pagination";
+import Footer from "../../../components/Footer";
+import { Pagination } from "../../../components/Pagination";
 
 export default function Disco({ disco, category }) {
   dayjs.extend(utc);
@@ -68,6 +68,7 @@ export default function Disco({ disco, category }) {
                           value={`/disco/category/${category.category_slug}/`}
                           key={index}
                         >
+                          {/* SINGLE */}
                           {category.name}
                         </option>
                       ))}
@@ -135,14 +136,20 @@ export default function Disco({ disco, category }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  const data = await client.get({
-    endpoint: "disco",
-    queries: { limit: 1000 },
-  });
+  // const data = await client.get({
+  //   endpoint: "disco",
+  //   queries: { limit: 1000 },
+  // });
 
   const key = {
     headers: { "X-MICROCMS-API-KEY": process.env.API_KEY },
   };
+  const dataDisco = await fetch(
+    "https://artist-nextjs-test01.microcms.io/api/v1/disco?filters=category[equals]udebxl1j3b1v",
+    key
+  )
+    .then((res) => res.json())
+    .catch(() => null);
 
   const dataCategory = await fetch(
     "https://artist-nextjs-test01.microcms.io/api/v1/category-disco",
@@ -153,7 +160,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      disco: data.contents,
+      disco: dataDisco.contents,
       category: dataCategory.contents,
     },
   };

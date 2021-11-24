@@ -2,8 +2,14 @@
   text-align: center;
   position: relative;
   margin-left: 120px;
+  @include tab {
+    margin-left: 0;
+  }
   .c--footer__main {
     padding: 70px 0 50px;
+    @include tab {
+      padding: 25px 0 29px;
+    }
     .c--footer__copy {
       @include alp;
       font-size: 11px;
@@ -16,6 +22,12 @@
     right: 40px;
     bottom: 50px;
     cursor: pointer;
+    @include tab {
+      right: auto;
+      bottom: 30px;
+      left: 10px;
+      width: 14px;
+    }
     img {
       transform: scaleY(-1);
     }

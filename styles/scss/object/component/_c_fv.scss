@@ -4,6 +4,15 @@
     max-width: 1500px;
     margin-left: auto;
     width: 82%;
+    img {
+        width: 100%;
+    }
+    @include tab {
+        padding-top: 60px;
+        margin-left: 35px;
+        width: 100%;
+        padding-bottom: 80px;
+    }
     &.--pc {
         @include tab {
             display: none;

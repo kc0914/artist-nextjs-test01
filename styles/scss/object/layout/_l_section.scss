@@ -2,6 +2,9 @@
     text-align: center;
     .l--section__head {
         padding: 104px 0 75px;
+        @include tab {
+            padding: 0px 0 27px;
+        }
     }
     .l--section__title {
         @include alp2;
@@ -9,5 +12,10 @@
         font-weight: 600;
         letter-spacing: 0.15em;
         line-height: 1;
+        @include tab {
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            line-height: 1;
+        }
     }
 }

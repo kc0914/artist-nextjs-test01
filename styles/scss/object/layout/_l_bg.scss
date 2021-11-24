@@ -12,6 +12,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        @include tab {
+            height: 630px;
+        }
     }
 }
 
@@ -23,5 +26,8 @@
         bottom: 0;
         left: 120px;
         background-color: #d37578;
+        @include tab {
+            left: 35px;
+        }
     }
 }

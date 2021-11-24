@@ -5,7 +5,7 @@ export const Pagination = ({ totalCount, pageName }) => {
   const router = useRouter();
 
   const current = router.query.id;
-  console.log(router);
+  // console.log(router);
   const PER_PAGE = 10;
 
   const range = (start, end) =>

@@ -15,8 +15,8 @@ export default function Home({ home }) {
 
   return (
     <>
-      {home.map((home) => (
-        <div key={home.id} className="container --full">
+      {home.map((home, index) => (
+        <div key={index} className="container --full">
           {/* bg */}
           <div className="l--bg">
             <div className="l--bg__block"></div>
@@ -45,11 +45,9 @@ export default function Home({ home }) {
                   spaceBetween={20}
                   slidesPerView={3}
                   loop={true}
-                  onSlideChange={() => console.log("slide change")}
-                  onSwiper={(swiper) => console.log(swiper)}
                 >
                   {home.movie.map((movie, index) => (
-                    <SwiperSlide key={movie.id}>
+                    <SwiperSlide key={index}>
                       <div
                         className="c--movie__img"
                         style={{
