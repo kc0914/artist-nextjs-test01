@@ -184,6 +184,10 @@ body {
   }
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .alp {
   font-family: "Josefin Sans", "Noto Sans JP", "游ゴシック", YuGothic, "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Helvetica Neue", Arial, sans-serif;
 }
