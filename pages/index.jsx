@@ -45,6 +45,30 @@ export default function Home({ home }) {
                   spaceBetween={20}
                   slidesPerView={3}
                   loop={true}
+                  centeredSlides={true}
+                  className="tab--hidden"
+                >
+                  {home.movie.map((movie, index) => (
+                    <SwiperSlide key={index}>
+                      <div
+                        className="c--movie__img"
+                        style={{
+                          backgroundImage: `url(${movie.movie_thumb.url})`,
+                        }}
+                        // src={`${movie.movie_thumb.url}`}
+                        // alt={index}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <Swiper
+                  autoplay={{ delay: 4500 }}
+                  speed={1500}
+                  spaceBetween={20}
+                  slidesPerView={2}
+                  loop={true}
+                  centeredSlides={true}
+                  className="tab--show"
                 >
                   {home.movie.map((movie, index) => (
                     <SwiperSlide key={index}>
